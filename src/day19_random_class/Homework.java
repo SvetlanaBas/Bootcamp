@@ -31,7 +31,7 @@ public class Homework {
         }
         System.out.println();
 
-         */
+         //
 
         int[] array = new int[10];
         Random random = new Random();
@@ -46,7 +46,6 @@ public class Homework {
         for (int value : array) {
             System.out.print(value + " ");
         }
-        System.out.println();
 
         System.out.println("Target: " + target);
 
@@ -58,9 +57,32 @@ public class Homework {
                 break;
             }
         }
-
         if (!found) {
             System.out.println("Target not found in the array.");
         }
+
+         */
+
+
+
+        int[] array = new int[30];
+        Random random = new Random();
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(16);
+        }
+
+        int randomIndex = random.nextInt(array.length);
+        int chosenValue = array[randomIndex];
+
+
+        int count = 0;
+        for (int value : array) {
+            if (value == chosenValue) {
+                count++;
+            }
+        }
+
+        System.out.println("The value " + chosenValue + " occurs " + count + " times in the array.");
     }
 }
